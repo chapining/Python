@@ -18,4 +18,3 @@ if user_age > minimum_age:
 		print("Всего хватает, проходите, деньги спишуться автоматически!")
 	elif user_age >= minimum_age and user_balance < minimum_balance:
 		print("Но денег слишком мало, приходите когда получите ещё", difference_balance, "!")
-		
