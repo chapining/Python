@@ -13,8 +13,11 @@ if user_age > minimum_age:
 	user_balance = input("Сколько у вас есть деняк?")
 	user_balance = int(user_balance)
 	difference_balance = minimum_balance - user_balance
-	
+	change = user_balance - minimum_balance 
+
 	if user_age >= minimum_age and user_balance >= minimum_balance:
 		print("Всего хватает, проходите, деньги спишуться автоматически!")
+		print("У вас останется", change, "!")
 	elif user_age >= minimum_age and user_balance < minimum_balance:
 		print("Но денег слишком мало, приходите когда получите ещё", difference_balance, "!")
+		
