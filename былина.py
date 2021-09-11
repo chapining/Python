@@ -28,25 +28,29 @@ text = """
 """
 
 print(text)
-choice_0 = input("вариант ответа: \n")
+choice_0 = input("вариант ответа: ")
 int(choice_0)
-while choice_0 == 1, 2, 3
-
+while choice_0 == list(1 , 2 , 3):
 	if choice_0 == 1:
 		text = """
 		– Мне, старому, в бою смерть не писана. Дай поеду, где убиту быть.
-
 		"""
+		print(text)
+		
 	elif choice_0 == 2:
 		text = """
 		-Жена это не плохо, поехали Бурушка!
-
 		"""
+		print(text)
+		
 	elif choice_0 == 3:
 		text = """
 		-Богатство это хорошо, но сыр только в мышеловке! Посмотрим, что там такое.
 		"""
-	else
+		print(text)
+		
+	else:
 		text = """
 		Выбран неверный вариант ответа!
 		"""
+		print(text)
