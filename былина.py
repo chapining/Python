@@ -1,4 +1,5 @@
 import os
+import random as rnd
 
 text = """
 Здравствуйте, это игра на тему "три поездки Ильи Муромца"
@@ -28,29 +29,83 @@ text = """
 """
 
 print(text)
-choice_0 = input("вариант ответа: ")
-int(choice_0)
-while choice_0 == list(1 , 2 , 3):
-	if choice_0 == 1:
-		text = """
-		– Мне, старому, в бою смерть не писана. Дай поеду, где убиту быть.
-		"""
-		print(text)
-		
-	elif choice_0 == 2:
-		text = """
-		-Жена это не плохо, поехали Бурушка!
-		"""
-		print(text)
-		
-	elif choice_0 == 3:
-		text = """
-		-Богатство это хорошо, но сыр только в мышеловке! Посмотрим, что там такое.
-		"""
-		print(text)
-		
-	else:
-		text = """
-		Выбран неверный вариант ответа!
-		"""
-		print(text)
+
+choice = ""
+level = "0"
+game = True
+
+while choice not in ("1", "2", "3"):
+    choice = input("вариант ответа: ")
+
+# text = "Выбран неверный вариант ответа!"
+# print(text)
+
+level = level + choice # 01 02 03
+
+if level == "01":
+    os.system("cls")
+
+    text = """
+    – Мне, старому, в бою смерть не писана. Дай поеду, где убиту быть.
+    """
+    print(text)
+
+elif level == "02":
+
+    os.system("cls")
+
+    text = """
+    -Жена это не плохо, поехали Бурушка!
+    """
+
+    print(text)
+
+elif level == "03":
+
+    os.system("cls")
+
+    text = """
+    -Богатство это хорошо, но сыр только в мышеловке! Посмотрим, что там такое.
+    """
+
+    print(text)
+
+choice = ""
+while choice not in ("1", "2"):
+    os.system("cls")
+    #TODO: доделай вопрос!
+    choice = input("""
+Куда дальше???
+1 или 2
+вариант ответа: 
+        """)
+
+level = level + choice # 011 012 021 022 031 032
+
+if level == "011":
+    os.system("cls")
+    #TODO: историю доделай!
+    print("""
+ты встретил казаков, хочешь сыграть в кости на мешок денег, в нём 100 золотых, или подраться?
+        """)
+    choice = ""
+    while 
+
+elif level == "012":
+    os.system("cls")
+    print("012")
+
+elif level == "021":
+    os.system("cls")
+    print("021")
+elif level == "022":
+    os.system("cls")
+    print("022")
+
+elif level == "031":
+    os.system("cls")
+    print("031")
+else:
+    os.system("cls")
+    print("032")
+    
