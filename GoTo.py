@@ -3,7 +3,7 @@ import random as rnd
 import math
 import casino
 
-def  show_location_home():
+def  show_location_home(user_money):
     #описыва локацию
     os.system("cls")
     print("Ты у себя дома")
@@ -17,12 +17,13 @@ def  show_location_home():
         choice = input("Куда дальше? \n 1 или 2 \n вариант ответа:")
     #проверить ответ пользователя
     if choice == "1":
-        show_location_casino()
+        show_location_casino(user_money)
     elif choice == "2":
-        show_location_home()
+        show_location_home(user_money)
+    return user_money
 
 
-def show_location_casino():
+def show_location_casino(user_money):
     #описыва локацию
     os.system("cls")
     print("Ты в казино")
@@ -39,22 +40,22 @@ def show_location_casino():
     elif choice == "2":
         show_location_casino()
     elif choice == "3":
-        while counter != 0:
-            counter -= 1
-            show_gamble()
-            if user_money <= 0:
-                break
-
-
-
-def show_gamble():
-    user_money += casino.play_dice(500)
-    print(f"У вас теперь  {user_money}")
-    input("Нажмите ENTER, чтобы вернуться в казино")
+       show_gamble(user_money)
+    return user_money
     
 
+def show_gamble(user_money):
+    user_money = casino.play_dice(user_money)
+    print(f"У вас теперь  {user_money}")
+    input("Нажмите ENTER, чтобы вернуться в казино")
+    show_location_casino(user_money)
+    return user_money
 
 # игра началась здесь
 user_name = "Вася"
 user_money = 5000
-show_location_home()
+user_lock = 100 #TODO: сделать систему везения
+show_location_home(user_money)
+
+
+
